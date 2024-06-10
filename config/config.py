@@ -9,7 +9,7 @@ def read_yaml(file_path):
 
 
 # 설정 파일 경로
-yaml_file_path = rf'C:/Users/hong_/Desktop/수업/2024년 1학기/(usg)캡스톤종합설계/개발/clothes_kmodes/config/config.yaml'
+yaml_file_path = rf'config\config.yaml'
 
 # YAML 파일 읽기
 config = read_yaml(yaml_file_path)
