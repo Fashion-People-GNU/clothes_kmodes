@@ -1,6 +1,3 @@
-"""
-서버에서 사용할 수 있는 api
-"""
 import pandas as pd
 from kmodes.kprototypes import KPrototypes
 import joblib
@@ -36,6 +33,7 @@ def predict(*args):
         else:
             new_data = load_df.get_from_user_info_and_bottom(user_info, other_info)
 
+    print(new_data)
 
     # 모델을 저장할 파일 경로
     model_path = cfg.kproto_model_path
@@ -48,8 +46,7 @@ def predict(*args):
     df = pd.read_csv(cfg.final_result_with_cluster_path)
     categorical_cols_indices = [df.columns.get_loc(col) for col in categorical_cols]
     cluster_for_new_data = kproto.predict(new_data, categorical=categorical_cols_indices)
-
-    print(new_data)
+    print(cluster_for_new_data)
 
     # 새로운 데이터 포인트의 클러스터에 해당하는 기존 클러스터 출력
     cluster_data = df[df['Cluster'] == cluster_for_new_data[0]]
@@ -57,3 +54,4 @@ def predict(*args):
     print(cluster_data)
 
     return cluster_for_new_data[0]
+
