@@ -16,3 +16,4 @@ config = read_yaml(yaml_file_path)
 kproto_model_path = config.paths.kproto_model_path
 final_result_path = config.paths.final_result_path
 final_result_with_cluster_path = config.paths.final_result_with_cluster_path
+json_path = config.paths.json_path

@@ -1,5 +1,6 @@
 from server_api import run
 import clothes_enum as CLTH
+import config.config as cfg
 import json
 
 """
@@ -19,15 +20,7 @@ def data_sort(clothes, type):
 
     return df_sorted
 
-def main():
-    age = "30대" # 사용자 입력 데이터
-    sex = "남성" # 사용자 입력 데이터
-    style = "스트리트" # 사용자 입력 데이터
-    temperatures = "55.4" # 오늘 기온
-    weather = "비" # 오늘 기상
-    humidity = "77.3" # 오늘 습도
-    wind_speed = "2.6" # 오늘 풍속
-
+def main(age, sex, style, temperatures, weather, humidity, wind_speed):
     top_id = ""
     top_color = ""
     top_print = ""
@@ -50,7 +43,7 @@ def main():
     top_clothes = run.predict(user_info, CLTH.TOP)
 
     # JSON 파일 경로
-    json_file_path = rf'C:\Users\hong_\Desktop\수업\2024년 1학기\(usg)캡스톤종합설계\개발\clothes_kmodes\datasets\user_clothes.json'
+    json_file_path = cfg.json_path
 
     # JSON 파일 읽기
     with open(json_file_path, 'r', encoding='utf-8') as file:
@@ -105,5 +98,12 @@ def main():
     return top_id, bottom_id
 
 if __name__ == "__main__":
-    result = main()
+    age = "30대" # 사용자 입력 데이터
+    sex = "남성" # 사용자 입력 데이터
+    style = "스트리트" # 사용자 입력 데이터
+    temperatures = "55.4" # 오늘 기온
+    weather = "비" # 오늘 기상
+    humidity = "77.3" # 오늘 습도
+    wind_speed = "2.6" # 오늘 풍속
+    result = main(age, sex, style, temperatures, weather, humidity, wind_speed)
     print(result)

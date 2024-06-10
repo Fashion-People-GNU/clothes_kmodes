@@ -2,4 +2,6 @@ paths:
   kproto_model_path: "C:/Users/hong_/Desktop/수업/2024년 1학기/(usg)캡스톤종합설계/개발/clothes_kmodes/datasets/kproto_model.joblib"
   final_result_path: "C:/Users/hong_/Desktop/수업/2024년 1학기/(usg)캡스톤종합설계/개발/clothes_kmodes/datasets/final_result.csv"
   final_result_with_cluster_path: 'C:/Users/hong_/Desktop/수업/2024년 1학기/(usg)캡스톤종합설계/개발/clothes_kmodes/datasets/final_result_with_clusters.csv'
+  json_path: "C:/Users/hong_/Desktop/수업/2024년 1학기/(usg)캡스톤종합설계/개발/clothes_kmodes/datasets/user_clothes.json"
+
 
