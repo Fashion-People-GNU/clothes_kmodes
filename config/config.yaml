@@ -1,0 +1,5 @@
+paths:
+  kproto_model_path: "D:/Development/Pycharm Projects/FashionPeople/datasets/kproto_model.joblib"
+  final_result_path: "D:/Development/Pycharm Projects/FashionPeople/datasets/final_result.csv"
+  final_result_with_cluster_path: 'D:/Development/Pycharm Projects/FashionPeople/datasets/final_result_with_clusters.csv'
+
