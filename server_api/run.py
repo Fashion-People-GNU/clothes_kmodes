@@ -28,7 +28,7 @@ def predict(*args):
 
     elif len(args) == 3 and isinstance(args[0], tuple) and isinstance(args[1], tuple) and isinstance(args[2], int):
         user_info, other_info, want_clothes_type = args
-        if other_info == CLTH.TOP:
+        if want_clothes_type == CLTH.BOTTOM:
             new_data = load_df.get_from_user_info_and_top(user_info, other_info)
         else:
             new_data = load_df.get_from_user_info_and_bottom(user_info, other_info)
@@ -50,8 +50,8 @@ def predict(*args):
 
     # 새로운 데이터 포인트의 클러스터에 해당하는 기존 클러스터 출력
     cluster_data = df[df['Cluster'] == cluster_for_new_data[0]]
-    print(f"새로운 데이터 포인트의 클러스터 ({cluster_for_new_data[0]})에 해당하는 데이터:")
-    print(cluster_data)
-
-    return cluster_for_new_data[0]
+    # print(f"새로운 데이터 포인트의 클러스터 ({cluster_for_new_data[0]})에 해당하는 데이터:")
+    # print(cluster_data)
+    
+    return cluster_data
 

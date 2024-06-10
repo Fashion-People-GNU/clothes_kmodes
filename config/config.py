@@ -3,13 +3,13 @@ from easydict import EasyDict
 
 
 def read_yaml(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding='utf-8') as file:
         cfg = yaml.safe_load(file)
     return EasyDict(cfg)
 
 
 # 설정 파일 경로
-yaml_file_path = rf'D:\Development\Pycharm Projects\FashionPeople\config\config.yaml'
+yaml_file_path = rf'C:/Users/hong_/Desktop/수업/2024년 1학기/(usg)캡스톤종합설계/개발/clothes_kmodes/config/config.yaml'
 
 # YAML 파일 읽기
 config = read_yaml(yaml_file_path)
