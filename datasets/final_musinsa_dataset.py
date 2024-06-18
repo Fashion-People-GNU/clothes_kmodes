@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 # CSV 파일 경로 설정
-weather_csv_path = r"D:\Development\Pycharm Projects\FashionPeople\datasets\musinsa_men_weather.csv"
+weather_csv_path = r"D:\Development\Pycharm Projects\FashionPeople\datasets\musinsa_weather.csv"
 musinsa_feature_csv_path = r"D:\Development\Pycharm Projects\FashionPeople\datasets\musinsa_result_1.csv"
 
 # 필요한 컬럼들 정의
